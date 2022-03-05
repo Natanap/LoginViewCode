@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0D3B7227D407AA001F9667 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D3B7127D407AA001F9667 /* RegisterViewController.swift */; };
 		2CA3811127C4FE1000165CF3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3811027C4FE1000165CF3 /* LoginScreen.swift */; };
 		2CF6D61427C410F4007D5460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6D61327C410F4007D5460 /* AppDelegate.swift */; };
 		2CF6D61627C410F4007D5460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6D61527C410F4007D5460 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0D3B7127D407AA001F9667 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2CA3811027C4FE1000165CF3 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		2CF6D61027C410F4007D5460 /* LoginViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF6D61327C410F4007D5460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0D3B6C27D406FF001F9667 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D3B6D27D4071B001F9667 /* Screnn */,
+				2C0D3B6E27D4072C001F9667 /* RegisterViewController */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		2C0D3B6D27D4071B001F9667 /* Screnn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screnn;
+			sourceTree = "<group>";
+		};
+		2C0D3B6E27D4072C001F9667 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D3B7127D407AA001F9667 /* RegisterViewController.swift */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
 		2CA3810D27C4FDB700165CF3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +150,7 @@
 		2CF6D61227C410F4007D5460 /* LoginViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				2C0D3B6C27D406FF001F9667 /* Register */,
 				2CA3810D27C4FDB700165CF3 /* Login */,
 				2CF6D61327C410F4007D5460 /* AppDelegate.swift */,
 				2CF6D61527C410F4007D5460 /* SceneDelegate.swift */,
@@ -282,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF6D61827C410F4007D5460 /* ViewController.swift in Sources */,
+				2C0D3B7227D407AA001F9667 /* RegisterViewController.swift in Sources */,
 				2CA3811127C4FE1000165CF3 /* LoginScreen.swift in Sources */,
 				2CF6D61427C410F4007D5460 /* AppDelegate.swift in Sources */,
 				2CF6D61627C410F4007D5460 /* SceneDelegate.swift in Sources */,
