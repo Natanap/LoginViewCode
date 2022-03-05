@@ -36,9 +36,8 @@ extension LoginVC:LoginScreenProtocol{
     
     func actionRegisterButton() {
         print("Deu certo")
-        
-        let vc:RegisterViewController = RegisterViewController()
-        
+        // CHAMANDO A OUTRA TELA
+        let vc:RegisterVC = RegisterVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
