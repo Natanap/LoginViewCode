@@ -104,7 +104,7 @@ class LoginScreen: UIView {
         self.configSuperView()
         self.configBackGround()
         self.setUpConstraints()
-        
+        self.configButtonEnable(false)
     }
     
     private func configBackGround(){
@@ -136,6 +136,29 @@ class LoginScreen: UIView {
         self.delegate?.actionRegisterButton()
     }
     
+    public func validaTextFields(){
+        let email:String = self.emailTextField.text ?? ""
+        let passaword:String = self.passwordTextField.text ?? ""
+        
+        //Verifica se os campos estão vazios
+        if !email.isEmpty && !passaword.isEmpty{
+            self.configButtonEnable(true)
+        }else{
+            self.configButtonEnable(false)
+        }
+    }
+    
+    private func configButtonEnable(_ enable:Bool){
+        //habilita o button
+        if enable {
+            self.loginButton.setTitleColor(.white, for: .normal)
+            self.loginButton.isEnabled = true
+        }else{
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginButton.isEnabled = false
+        }
+        
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
