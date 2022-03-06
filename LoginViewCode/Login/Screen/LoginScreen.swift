@@ -34,7 +34,7 @@ class LoginScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "logo")
-        image.tintColor = .green
+        image.tintColor = .white
         image.contentMode = .scaleAspectFit
         
         return image
@@ -54,6 +54,8 @@ class LoginScreen: UIView {
         return tf
  
     }()
+    
+    
     
     lazy var passwordTextField: UITextField = {
         let tf = UITextField()
@@ -91,14 +93,16 @@ class LoginScreen: UIView {
         button.setTitle("Não tem conta? Cadastra-se", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
+        
+        //Adicionado target para o button
         button.addTarget(self, action: #selector(self.tappedLoginregisterButton), for: .touchUpInside)
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.configBackGround()
         self.configSuperView()
+        self.configBackGround()
         self.setUpConstraints()
         
     }

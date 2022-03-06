@@ -14,6 +14,7 @@ class LoginVC: UIViewController {
     override func loadView() {
         self.loginScreen = LoginScreen()
         self.view = self.loginScreen
+
     }
     
     override func viewDidLoad() {
