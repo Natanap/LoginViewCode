@@ -9,10 +9,12 @@ import UIKit
 
 class RegisterVC: UIViewController {
 
+    var registerScrenn: RegisterScrenn?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
-
+        self.registerScrenn = RegisterScrenn()
+        self.view = self.registerScrenn
     }
 
 }
