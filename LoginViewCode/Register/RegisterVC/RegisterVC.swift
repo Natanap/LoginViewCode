@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterVC: UIViewController {
 
     var registerScrenn: RegisterScrenn?
+    
+    var auth:Auth?
+    
     override func loadView() {
         self.registerScrenn = RegisterScrenn()
         self.view = self.registerScrenn
@@ -18,6 +22,7 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         self.registerScrenn?.configTextFieldDelegate(delegate: self)
         self.registerScrenn?.delegate(delegate: self)
+        self.auth = Auth.auth()
     }
 
 }
@@ -43,7 +48,7 @@ extension RegisterVC: RegisterScrennProtocol{
     }
     
     func actionRegisterButton() {
-        print("Register Button")
+        self.auth?.createUser(withEmail: <#T##String#>, password: <#T##String#>, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
     }
     
     
