@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C0D3B7227D407AA001F9667 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D3B7127D407AA001F9667 /* RegisterVC.swift */; };
 		2C0D3B7427D40E1E001F9667 /* RegisterScrenn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D3B7327D40E1E001F9667 /* RegisterScrenn.swift */; };
+		2C20186827DEA1D400F17882 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C20186727DEA1D400F17882 /* GoogleService-Info.plist */; };
+		2C61932727E250C4002C5024 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61932627E250C4002C5024 /* Alert.swift */; };
 		2CA3811127C4FE1000165CF3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3811027C4FE1000165CF3 /* LoginScreen.swift */; };
 		2CF6D61427C410F4007D5460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6D61327C410F4007D5460 /* AppDelegate.swift */; };
 		2CF6D61627C410F4007D5460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6D61527C410F4007D5460 /* SceneDelegate.swift */; };
@@ -44,6 +46,8 @@
 		1C0B0C7DDC6C23213E779D71 /* Pods-LoginViewCode-LoginViewCodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViewCode-LoginViewCodeUITests.release.xcconfig"; path = "Target Support Files/Pods-LoginViewCode-LoginViewCodeUITests/Pods-LoginViewCode-LoginViewCodeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C0D3B7127D407AA001F9667 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		2C0D3B7327D40E1E001F9667 /* RegisterScrenn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScrenn.swift; sourceTree = "<group>"; };
+		2C20186727DEA1D400F17882 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C61932627E250C4002C5024 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2CA3811027C4FE1000165CF3 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		2CF6D61027C410F4007D5460 /* LoginViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF6D61327C410F4007D5460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 			path = RegisterVC;
 			sourceTree = "<group>";
 		};
+		2C61932527E250B3002C5024 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C61932627E250C4002C5024 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		2CA3810D27C4FDB700165CF3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 		2CF6D61227C410F4007D5460 /* LoginViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				2C61932527E250B3002C5024 /* Alert */,
 				2C0D3B6C27D406FF001F9667 /* Register */,
 				2CA3810D27C4FDB700165CF3 /* Login */,
 				2CF6D61327C410F4007D5460 /* AppDelegate.swift */,
@@ -177,6 +190,7 @@
 				2CF6D61C27C410F9007D5460 /* Assets.xcassets */,
 				2CF6D61E27C410F9007D5460 /* LaunchScreen.storyboard */,
 				2CF6D62127C410F9007D5460 /* Info.plist */,
+				2C20186727DEA1D400F17882 /* GoogleService-Info.plist */,
 			);
 			path = LoginViewCode;
 			sourceTree = "<group>";
@@ -218,7 +232,6 @@
 				535F5FE90DF80F3F623B6C20 /* Pods-LoginViewCodeTests.debug.xcconfig */,
 				66EFFABB83188E2EC98DF317 /* Pods-LoginViewCodeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -333,6 +346,7 @@
 			files = (
 				2CF6D62027C410F9007D5460 /* LaunchScreen.storyboard in Resources */,
 				2CF6D61D27C410F9007D5460 /* Assets.xcassets in Resources */,
+				2C20186827DEA1D400F17882 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +480,7 @@
 				2CF6D61427C410F4007D5460 /* AppDelegate.swift in Sources */,
 				2CF6D61627C410F4007D5460 /* SceneDelegate.swift in Sources */,
 				2C0D3B7427D40E1E001F9667 /* RegisterScrenn.swift in Sources */,
+				2C61932727E250C4002C5024 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

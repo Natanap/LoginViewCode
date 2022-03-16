@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
     
     var loginScreen:LoginScreen?
+    var auth: Auth?
+    var alert: Alert?
     
     override func loadView() {
         self.loginScreen = LoginScreen()
@@ -21,7 +24,8 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         self.loginScreen?.delegate(delegate: self)
         self.loginScreen?.configTextFieldDelegate(delegate: self)
-        
+        self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
     }
 
     
@@ -32,11 +36,25 @@ class LoginVC: UIViewController {
 
 extension LoginVC:LoginScreenProtocol{
     func actionLoginButton() {
-        print("Deu certo")
+        guard let login = self.loginScreen else {return}
+        
+        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { (usuario, error) in
+            
+            if error != nil{
+                self.alert?.getAlert(titulo: "Atencao", mensagem: "Dados incorretos")
+            }else{
+                if usuario == nil {
+                    self.alert?.getAlert(titulo: "Atencao", mensagem: "Tivemos um problema")
+                }else{
+                    print(" Usuario logado com sucesso")
+                }
+            }
+            
+        })
+        
     }
     
     func actionRegisterButton() {
-        print("Deu certo")
         // CHAMANDO A OUTRA TELA
         let vc:RegisterVC = RegisterVC()
         self.navigationController?.pushViewController(vc, animated: true)

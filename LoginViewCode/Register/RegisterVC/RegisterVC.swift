@@ -13,6 +13,7 @@ class RegisterVC: UIViewController {
     var registerScrenn: RegisterScrenn?
     
     var auth:Auth?
+    var alert:Alert?
     
     override func loadView() {
         self.registerScrenn = RegisterScrenn()
@@ -23,6 +24,7 @@ class RegisterVC: UIViewController {
         self.registerScrenn?.configTextFieldDelegate(delegate: self)
         self.registerScrenn?.delegate(delegate: self)
         self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
     }
 
 }
@@ -43,12 +45,21 @@ extension RegisterVC: UITextFieldDelegate {
 
 extension RegisterVC: RegisterScrennProtocol{
     func actionBackButton() {
-        print("Back Button !!")
         self.navigationController?.popViewController(animated: true)
     }
     
     func actionRegisterButton() {
-        self.auth?.createUser(withEmail: <#T##String#>, password: <#T##String#>, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
+        
+        guard let register = self.registerScrenn else{return}
+        
+        self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: {(result,error) in
+            
+            if error != nil{
+                print("Error ao cadastarr")
+            }else{
+                print("Sucesso ao cadastarr")
+            }
+        })
     }
     
     
