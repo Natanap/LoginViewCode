@@ -55,9 +55,11 @@ extension RegisterVC: RegisterScrennProtocol{
         self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: {(result,error) in
             
             if error != nil{
-                print("Error ao cadastarr")
+                self.alert?.getAlert(titulo: "Atenção", mensagem: "Erro ao cadastrar, verifique os dados e tente novamente")
             }else{
-                print("Sucesso ao cadastarr")
+                self.alert?.getAlert(titulo: "Parabens", mensagem: "Usuario cadastrado com sucesso", completion: {
+                    self.navigationController?.popViewController(animated: true)
+                })
             }
         })
     }
