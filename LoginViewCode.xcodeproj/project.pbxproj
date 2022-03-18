@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		2C0D3B7227D407AA001F9667 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D3B7127D407AA001F9667 /* RegisterVC.swift */; };
 		2C0D3B7427D40E1E001F9667 /* RegisterScrenn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D3B7327D40E1E001F9667 /* RegisterScrenn.swift */; };
+		2C15357A27E40C9D00538721 /* HomeScrenn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15357927E40C9D00538721 /* HomeScrenn.swift */; };
+		2C15357D27E415C700538721 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15357C27E415C700538721 /* UserDetailTableViewCell.swift */; };
+		2C15358027E4190B00538721 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15357F27E4190B00538721 /* DataUser.swift */; };
 		2C20186827DEA1D400F17882 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C20186727DEA1D400F17882 /* GoogleService-Info.plist */; };
 		2C61932727E250C4002C5024 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61932627E250C4002C5024 /* Alert.swift */; };
+		2C61932C27E25C67002C5024 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61932B27E25C67002C5024 /* HomeVC.swift */; };
 		2CA3811127C4FE1000165CF3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3811027C4FE1000165CF3 /* LoginScreen.swift */; };
 		2CF6D61427C410F4007D5460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6D61327C410F4007D5460 /* AppDelegate.swift */; };
 		2CF6D61627C410F4007D5460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6D61527C410F4007D5460 /* SceneDelegate.swift */; };
@@ -46,8 +50,12 @@
 		1C0B0C7DDC6C23213E779D71 /* Pods-LoginViewCode-LoginViewCodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViewCode-LoginViewCodeUITests.release.xcconfig"; path = "Target Support Files/Pods-LoginViewCode-LoginViewCodeUITests/Pods-LoginViewCode-LoginViewCodeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C0D3B7127D407AA001F9667 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		2C0D3B7327D40E1E001F9667 /* RegisterScrenn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScrenn.swift; sourceTree = "<group>"; };
+		2C15357927E40C9D00538721 /* HomeScrenn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrenn.swift; sourceTree = "<group>"; };
+		2C15357C27E415C700538721 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2C15357F27E4190B00538721 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
 		2C20186727DEA1D400F17882 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C61932627E250C4002C5024 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		2C61932B27E25C67002C5024 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2CA3811027C4FE1000165CF3 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		2CF6D61027C410F4007D5460 /* LoginViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF6D61327C410F4007D5460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,12 +132,55 @@
 			path = RegisterVC;
 			sourceTree = "<group>";
 		};
+		2C15357B27E4158C00538721 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C15357C27E415C700538721 /* UserDetailTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2C15357E27E418F700538721 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C15357F27E4190B00538721 /* DataUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2C61932527E250B3002C5024 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
 				2C61932627E250C4002C5024 /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		2C61932827E25C18002C5024 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2C15357E27E418F700538721 /* Model */,
+				2C15357B27E4158C00538721 /* Cell */,
+				2C61932927E25C1F002C5024 /* Screen */,
+				2C61932A27E25C27002C5024 /* VC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2C61932927E25C1F002C5024 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C15357927E40C9D00538721 /* HomeScrenn.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		2C61932A27E25C27002C5024 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2C61932B27E25C67002C5024 /* HomeVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		2CA3810D27C4FDB700165CF3 /* Login */ = {
@@ -182,6 +233,7 @@
 		2CF6D61227C410F4007D5460 /* LoginViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				2C61932827E25C18002C5024 /* Home */,
 				2C61932527E250B3002C5024 /* Alert */,
 				2C0D3B6C27D406FF001F9667 /* Register */,
 				2CA3810D27C4FDB700165CF3 /* Login */,
@@ -478,8 +530,12 @@
 				2C0D3B7227D407AA001F9667 /* RegisterVC.swift in Sources */,
 				2CA3811127C4FE1000165CF3 /* LoginScreen.swift in Sources */,
 				2CF6D61427C410F4007D5460 /* AppDelegate.swift in Sources */,
+				2C15358027E4190B00538721 /* DataUser.swift in Sources */,
 				2CF6D61627C410F4007D5460 /* SceneDelegate.swift in Sources */,
+				2C15357D27E415C700538721 /* UserDetailTableViewCell.swift in Sources */,
 				2C0D3B7427D40E1E001F9667 /* RegisterScrenn.swift in Sources */,
+				2C61932C27E25C67002C5024 /* HomeVC.swift in Sources */,
+				2C15357A27E40C9D00538721 /* HomeScrenn.swift in Sources */,
 				2C61932727E250C4002C5024 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
